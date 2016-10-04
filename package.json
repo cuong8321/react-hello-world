@@ -10,6 +10,6 @@
     "clean": "bash -c './sh/clean.sh'",
     "fix": "bash -c './sh/fix.sh'",
     "test": "bash -c './sh/test.sh'",
-    "build": "bash -c './sh/build.sh'"
+    "build": "bash -c 'BUILD_MODE=Release ./sh/build.sh'"
   }
 }
