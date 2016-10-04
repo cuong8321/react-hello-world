@@ -16,6 +16,9 @@ temp.*
 /release
 /release.*
 /*.release
+/debug
+/debug.*
+/*.debug
 
 # Logs
 logs
