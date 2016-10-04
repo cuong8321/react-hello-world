@@ -15,7 +15,7 @@ deploy:
   api_key: $GITHUB_RELEASE_OAUTH
   skip_cleanup: true
   file_glob: true
-  file: $(./sh/deploy/travis-ci/file.sh)
+  file: $(./sh/deploy/travis-ci/directory.sh)/*
   on:
     tags: true
 
