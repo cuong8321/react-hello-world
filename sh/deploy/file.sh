@@ -1,2 +1,1 @@
-
 echo $(pwd)/releases
