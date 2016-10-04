@@ -1,0 +1,2 @@
+echo 'Building...'
+echo 'Done'
