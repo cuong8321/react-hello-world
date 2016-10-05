@@ -1,1 +1,1 @@
-echo $(pwd)/out/release
+echo $(pwd)/out
