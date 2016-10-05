@@ -1,5 +1,5 @@
 
-list=(out debug release object)
+list=(out debug release)
 
 for left in ${list[@]}
 do
