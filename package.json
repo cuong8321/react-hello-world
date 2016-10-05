@@ -8,6 +8,8 @@
   "scripts": {
     "remake-package-json": "node sh/remake-package-json",
     "clean": "bash -c './sh/clean.sh'",
+    "clean-artifacts": "bash -c './sh/clean-artifacts.sh'",
+    "clean-all": "bash -c './sh/clean-all.sh'",
     "fix": "bash -c './sh/fix.sh'",
     "test": "bash -c './sh/test.sh'",
     "build": "bash -c 'BUILD_MODE=Release ./sh/build.sh'"
