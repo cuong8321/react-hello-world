@@ -10,4 +10,6 @@
   )
 ) && (
   ./sh/build.sh
+) && (
+  node ./test
 )
