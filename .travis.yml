@@ -10,7 +10,7 @@ before_script:
   - chmod -R +x sh
   - [ -z TRAVIS_TAG ] && BUILD_MODE=Debug || BUILD_MODE=Release
   - export BUILD_MODE
-  - export GIT_REPO_TAG=TRAVIS_TAG
+  - export GIT_REPO_TAG=$TRAVIS_TAG
 
 script:
   - npm test
