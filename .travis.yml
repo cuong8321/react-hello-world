@@ -8,7 +8,7 @@ node_js:
 
 before_script:
   - chmod -R +x sh
-  - [ -z TRAVIS_TAG ] && BUILD_MODE=Release || BUILD_MODE=Debug
+  - [ -z TRAVIS_TAG ] && BUILD_MODE=Debug || BUILD_MODE=Release
   - export BUILD_MODE
 
 script:
