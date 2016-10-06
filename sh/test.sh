@@ -9,5 +9,5 @@
     exit 2
   )
 ) && (
-  BUILD_MODE=Debug ./sh/build.sh
+  ./sh/build.sh
 )

@@ -8,6 +8,8 @@ node_js:
 
 before_script:
   - chmod -R +x sh
+  - [ -z TRAVIS_TAG ] && BUILD_MODE=Release || BUILD_MODE=Debug
+  - export BUILD_MODE
 
 before_deploy:
   - source ./sh/deploy/travis-ci/before.sh
