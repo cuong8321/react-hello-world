@@ -11,6 +11,9 @@ before_script:
   - [ -z TRAVIS_TAG ] && BUILD_MODE=Release || BUILD_MODE=Debug
   - export BUILD_MODE
 
+script:
+  - npm test
+
 before_deploy:
   - source ./sh/deploy/travis-ci/before.sh
 
