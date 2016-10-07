@@ -4,10 +4,11 @@ const {freeze} = Object
 
 class ServerError extends Error {
   constructor (message, response) {
+    super(message)
     return freeze({
       message,
       response,
-      __proto__: super(message)
+      __proto__: this
     })
   }
   get name () {
