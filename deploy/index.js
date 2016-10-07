@@ -4,6 +4,7 @@ const {readdirSync} = require('fs')
 const skip = new Set([
   'node_modules',
   'package.json',
+  'lib',
   'index.js'
 ])
 readdirSync(__dirname)
