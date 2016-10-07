@@ -77,6 +77,6 @@ function * main () {
 
 function halt (error, message) {
   stderr.write(message + '\n')
-  stdout.write(JSON.stringify(error) + '\n')
+  stdout.write(JSON.stringify(error, undefined, 2) + '\n')
   exit(1)
 }
