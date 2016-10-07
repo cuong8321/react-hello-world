@@ -19,6 +19,7 @@ before_deploy:
 deploy:
   provider: script
   script: ./sh/travis-ci/deploy.sh
+  skip_cleanup: true
   on:
     tags: true
 
