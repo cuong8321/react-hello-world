@@ -1,1 +1,1 @@
-echo out debug release
+echo out

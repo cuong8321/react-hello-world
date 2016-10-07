@@ -14,4 +14,5 @@ temp.*
 /appveyor.yml
 /circle.yml
 /sh
+/deploy
 docs

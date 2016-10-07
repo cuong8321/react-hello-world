@@ -8,19 +8,20 @@ node_js:
 
 before_script:
   - chmod -R +x sh
+  - source ./sh/travis-ci/before-script.sh
+
+script:
+  - npm test
 
 before_deploy:
-  - chmod -R +x sh
-  - source ./sh/deploy/travis-ci/before.sh
+  - source ./sh/travis-ci/before-deploy.sh
 
 deploy:
-  provider: releases
-  api_key: $GITHUB_RELEASE_OAUTH
+  provider: script
+  script: ./sh/travis-ci/deploy.sh
   skip_cleanup: true
-  file_glob: true
-  file: $(./sh/deploy/travis-ci/directory.sh)/*
   on:
     tags: true
 
 after_deploy:
-  - source ./sh/deploy/travis-ci/after.sh
+  - source ./sh/travis-ci/after-deploy.sh
