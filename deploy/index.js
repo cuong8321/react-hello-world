@@ -67,19 +67,17 @@ function * main () {
               .then(resolve, msgerr(reject, 'Creating release failed'))
         )
   )
-  const RELEASE_DESC = assign({}, RELEASE_PROTO, {
-    id: RELEASE_INFO.id,
-    __proto__: null
-  })
   try {
     const all = readdirSync(ARTIFACTS_DIRECTORY)
       .map(
-        name =>
-          assign({}, RELEASE_DESC, {
-            name,
-            filePath: join(ARTIFACTS_DIRECTORY, name),
-            __proto__: null
-          })
+        name => ({
+          name,
+          filePath: join(ARTIFACTS_DIRECTORY, name),
+          user: GIT_REPO_OWNER,
+          repo: GIT_REPO_NAME,
+          id: RELEASE_INFO.id,
+          __proto__: null
+        })
       )
       .map(
         request =>
