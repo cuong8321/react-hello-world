@@ -45,15 +45,20 @@ function * main () {
     prerelease: (/.*\-beta[0-9]{0,}$/).test(GIT_REPO_TAG),
     __proto__: null
   })
-  const RELEASE_INFO = repos.getReleaseByTag(DESC)
-    .then(
-      ({id}) =>
-        repos.editRelease(assign({}, RELEASE_PROTO, {id}))
-    )
-    .catch(
-      () =>
-        repos.createRelease(RELEASE_PROTO)
-    )
+  const RELEASE_INFO = yield new Promise(
+    (resolve, reject) =>
+      repos.getReleaseByTag(DESC)
+        .then(
+          ({id}) =>
+            repos.editRelease(assign({}, RELEASE_PROTO, {id}))
+              .then(resolve, reject)
+        )
+        .catch(
+          () =>
+            repos.createRelease(RELEASE_PROTO)
+              .then(resolve, reject)
+        )
+  )
   const RELEASE_DESC = assign({}, RELEASE_PROTO, {
     id: RELEASE_INFO.id,
     __proto__: null
