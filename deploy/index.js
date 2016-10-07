@@ -25,13 +25,13 @@ const {repos} = github
 
 new Promise(
   (resolve, reject) => {
-    const user = GIT_REPO_OWNER
-    const repo = GIT_REPO_NAME
-    const tag_name = GIT_REPO_TAG
-    const name = GIT_REPO_TAG
-    repos.editRelease({
-      user, repo, tag_name, name
-    })
+    const DESC = {
+      user: GIT_REPO_OWNER,
+      repo: GIT_REPO_NAME,
+      name: GIT_REPO_TAG,
+      tag_name: GIT_REPO_TAG
+    }
+    repos.editRelease(DESC)
       .then(
         () => {
           repos.uploadAsset()
