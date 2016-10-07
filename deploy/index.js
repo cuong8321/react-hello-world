@@ -1,7 +1,6 @@
 'use strict'
 const {join} = require('path')
 const {readdirSync} = require('fs')
-const {stderr, stdout, exit} = require('process')
 const skip = new Set([
   'node_modules',
   'package.json',
