@@ -1,6 +1,6 @@
 'use strict'
 const {argv, stdout, stderr, exit} = require('process')
-if (argv.length != 5) {
+if (argv.length !== 5) {
   stderr.write('Require 3 arguments\n')
   exit(1)
 }
