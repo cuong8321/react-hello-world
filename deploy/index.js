@@ -41,19 +41,14 @@ function * main () {
     __proto__: null
   }
   try {
-    DESC.id = (yield repos.getReleaseByTag(DESC)).id
-  } catch (error) {
-    throw halt(error, 'Getting release id failed')
-  }
-  try {
-    const EDIT_RELEASE = assign({}, DESC, {
+    const CREATE_RELEASE = assign({}, DESC, {
       draft: (/.*\-alpha[0-9]{0,}$/).test(GIT_REPO_TAG),
       prerelease: (/.*\-beta[0-9]{0,}$/).test(GIT_REPO_TAG),
       __proto__: null
     })
-    DESC.id = (yield repos.editRelease(EDIT_RELEASE)).id
+    yield repos.createRelease(CREATE_RELEASE)
   } catch (error) {
-    throw halt(error, 'Editing release failed')
+    throw halt(error, 'Creating release failed')
   }
   try {
     const all = readdirSync(ARTIFACTS_DIRECTORY)
