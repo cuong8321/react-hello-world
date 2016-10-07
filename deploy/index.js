@@ -21,9 +21,17 @@ const co = require('co')
 
 const GitHubAPIs = require('github')
 
+const {GitHubError} = require('./lib/error.js')
+
 const {assign} = Object
 
 co(main)
+  .then(
+    () => stdout.write('Deployment finished successfully\n')
+  )
+  .catch(
+    ({response, message}) => halt(response, message)
+  )
 
 function * main () {
   const github = new GitHubAPIs()
@@ -51,12 +59,12 @@ function * main () {
         .then(
           ({id}) =>
             repos.editRelease(assign({}, RELEASE_PROTO, {id}))
-              .then(resolve, reject)
+              .then(resolve, msgerr(reject, 'Editing release failed'))
         )
         .catch(
           () =>
             repos.createRelease(RELEASE_PROTO)
-              .then(resolve, reject)
+              .then(resolve, msgerr(reject, 'Creating release failed'))
         )
   )
   const RELEASE_DESC = assign({}, RELEASE_PROTO, {
@@ -79,7 +87,7 @@ function * main () {
       )
     yield Promise.all(all)
   } catch (error) {
-    throw halt(error, 'Uploading artifacts failed')
+    throw new GitHubError('Uploading artifacts failed', error)
   }
 }
 
@@ -87,4 +95,9 @@ function halt (error, message) {
   stderr.write(message + '\n')
   stdout.write(JSON.stringify(error, undefined, 2) + '\n')
   exit(1)
+}
+
+function msgerr (reject, message) {
+  return response =>
+    reject(new GitHubError(message, response))
 }
