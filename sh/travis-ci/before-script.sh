@@ -1,4 +1,3 @@
-chmod -R +x
 [ -z TRAVIS_TAG ] && {
   export BUILD_MODE=Debug
 } || {
