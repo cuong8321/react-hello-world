@@ -40,21 +40,29 @@ function * main () {
     tag: GIT_REPO_TAG,
     __proto__: null
   }
-  try {
-    const CREATE_RELEASE = assign({}, DESC, {
-      draft: (/.*\-alpha[0-9]{0,}$/).test(GIT_REPO_TAG),
-      prerelease: (/.*\-beta[0-9]{0,}$/).test(GIT_REPO_TAG),
-      __proto__: null
-    })
-    yield repos.createRelease(CREATE_RELEASE)
-  } catch (error) {
-    throw halt(error, 'Creating release failed')
-  }
+  const RELEASE_PROTO = assign({}, DESC, {
+    draft: (/.*\-alpha[0-9]{0,}$/).test(GIT_REPO_TAG),
+    prerelease: (/.*\-beta[0-9]{0,}$/).test(GIT_REPO_TAG),
+    __proto__: null
+  })
+  const RELEASE_INFO = repos.getReleaseByTag(DESC)
+    .then(
+      ({id}) =>
+        repos.editRelease(assign({}, RELEASE_PROTO, {id}))
+    )
+    .catch(
+      () =>
+        repos.createRelease(RELEASE_PROTO)
+    )
+  const RELEASE_DESC = assign({}, RELEASE_PROTO, {
+    id: RELEASE_INFO.id,
+    __proto__: null
+  })
   try {
     const all = readdirSync(ARTIFACTS_DIRECTORY)
       .map(
         name =>
-          assign({}, DESC, {
+          assign({}, RELEASE_DESC, {
             name,
             filePath: join(ARTIFACTS_DIRECTORY, name),
             __proto__: null
