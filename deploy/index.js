@@ -68,7 +68,7 @@ function * main () {
         )
   )
   const RELEASE_DESC = assign({}, RELEASE_PROTO, {
-    id: String(RELEASE_INFO.id),
+    id: RELEASE_INFO.id,
     __proto__: null
   })
   try {
