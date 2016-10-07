@@ -25,13 +25,17 @@ const {GitHubError} = require('../lib/error.js')
 
 const {assign} = Object
 
-co(main)
-  .then(
-    () => stdout.write('Deployment finished successfully\n')
-  )
-  .catch(
-    ({response, message}) => halt(response, message)
-  )
+if (GITHUB_RELEASE_OAUTH && GIT_REPO_TAG && GIT_REPO_OWNER && ARTIFACTS_DIRECTORY) {
+  co(main)
+    .then(
+      () => stdout.write('Deployment finished successfully\n')
+    )
+    .catch(
+      ({response, message}) => halt(response, message)
+    )
+} else {
+  stdout.write('Missing environment variables\nSkip GitHub Release deployment\n')
+}
 
 function * main () {
   const github = new GitHubAPIs()
