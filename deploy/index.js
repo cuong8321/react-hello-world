@@ -46,7 +46,7 @@ new Promise(
       exit(0)
     }
   )
-  .catch (
+  .catch(
     () => {
       stderr.write('Deploying failed.\n')
       exit(1)
