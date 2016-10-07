@@ -13,7 +13,7 @@ script:
   - npm test
 
 before_deploy:
-  - source ./sh/deploy/travis-ci/before.sh
+  - source ./sh/travis-ci/before-deploy.sh
 
 deploy:
   provider: releases
@@ -25,4 +25,4 @@ deploy:
     tags: true
 
 after_deploy:
-  - source ./sh/deploy/travis-ci/after.sh
+  - source ./sh/travis-ci/after-deploy.sh
