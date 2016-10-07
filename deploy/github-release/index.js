@@ -21,7 +21,7 @@ const co = require('co')
 
 const GitHubAPIs = require('github')
 
-const {GitHubError} = require('./lib/error.js')
+const {GitHubError} = require('../lib/error.js')
 
 const {assign} = Object
 
