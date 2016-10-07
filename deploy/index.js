@@ -70,11 +70,13 @@ function * main () {
           repos.uploadAsset(request)
       )
     yield Promise.all(all)
+  } catch (error) {
+    throw halt(error, 'Uploading artifacts failed')
   }
 }
 
 function halt (error, message) {
   stderr.write(message + '\n')
-  stdout.write(JSON.stringify(error))
+  stdout.write(JSON.stringify(error) + '\n')
   exit(1)
 }
