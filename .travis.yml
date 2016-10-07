@@ -8,26 +8,22 @@ node_js:
 
 before_script:
   - chmod -R +x sh
-  - '[ -z TRAVIS_TAG ] && BUILD_MODE=Debug || BUILD_MODE=Release'
-  - export BUILD_MODE
-  - export GIT_REPO_TAG=$TRAVIS_TAG
-  - export GIT_REPO_OWNER=$(node ./sh/lib/split.js $TRAVIS_REPO_SLUG '/' 0)
-  - export GIT_REPO_NAME=$(node ./sh/lib/split.js $TRAVIS_REPO_SLUG '/' 1)
+  - source ./sh/travis-ci/before-script.sh
 
 script:
   - npm test
 
 before_deploy:
-  - source ./sh/deploy/travis-ci/before.sh
+  - source ./sh/travis-ci/before-deploy.sh
 
 deploy:
   provider: releases
   api_key: $GITHUB_RELEASE_OAUTH
   skip_cleanup: true
   file_glob: true
-  file: $(./sh/deploy/travis-ci/directory.sh)/*
+  file: $(./sh/travis-ci/artifacts-directory.sh)/*
   on:
     tags: true
 
 after_deploy:
-  - source ./sh/deploy/travis-ci/after.sh
+  - source ./sh/travis-ci/after-deploy.sh
