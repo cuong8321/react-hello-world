@@ -9,10 +9,7 @@ const {
     GIT_REPO_OWNER,
     GIT_REPO_NAME,
     ARTIFACTS_DIRECTORY
-  },
-  stdout,
-  stderr,
-  exit
+  }
 } = require('process')
 
 const {readdirSync} = require('fs')
@@ -25,17 +22,35 @@ const {GitHubError} = require('../lib/error.js')
 
 const {assign} = Object
 
-if (GITHUB_RELEASE_OAUTH && GIT_REPO_TAG && GIT_REPO_OWNER && ARTIFACTS_DIRECTORY) {
-  co(main)
-    .then(
-      () => stdout.write('Deployment finished successfully\n')
-    )
-    .catch(
-      ({response, message}) => halt(response, message)
-    )
-} else {
-  stdout.write('Missing environment variables\nSkip GitHub Release deployment\n')
-}
+const {info, error} = global.console
+
+const handle = GITHUB_RELEASE_OAUTH && GIT_REPO_TAG && GIT_REPO_OWNER && ARTIFACTS_DIRECTORY
+  ? (resolve, reject) => {
+    co(main)
+      .then(
+        response => {
+          info('GitHub Release deployment finished successfully')
+          info('response', response)
+          resolve(response)
+        }
+      )
+      .catch(
+        response => {
+          error('Failed to Deploy GitHub Release')
+          info('response', response)
+          reject(response)
+        }
+      )
+  }
+  : resolve => {
+    error('Missing environment variables')
+    info('Skip GitHub Release deployment')
+    resolve()
+  }
+
+const promise = new Promise(handle)
+
+module.exports = promise
 
 function * main () {
   const github = new GitHubAPIs()
@@ -92,12 +107,6 @@ function * main () {
   } catch (error) {
     throw new GitHubError('Uploading artifacts failed', error)
   }
-}
-
-function halt (error, message) {
-  stderr.write(message + '\n')
-  stdout.write(JSON.stringify(error, undefined, 2) + '\n')
-  exit(1)
 }
 
 function msgerr (reject, message) {
