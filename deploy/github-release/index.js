@@ -56,7 +56,8 @@ function * main () {
   const github = new GitHubAPIs()
   github.authenticate({
     type: 'token',
-    token: GITHUB_RELEASE_OAUTH
+    token: GITHUB_RELEASE_OAUTH,
+    __proto__: null
   })
   const DESC = {
     user: GIT_REPO_OWNER,
