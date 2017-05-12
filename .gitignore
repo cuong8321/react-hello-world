@@ -19,6 +19,8 @@ temp.*
 /debug
 /debug.*
 /*.debug
+*.tern-project
+*.tern-project.json
 
 # Logs
 logs

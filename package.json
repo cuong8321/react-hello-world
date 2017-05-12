@@ -3,15 +3,17 @@
   "main": "index.js",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "devDependencies": {
-    "standard": "8.0.0"
+    "standard": "10.0.2"
   },
   "scripts": {
     "remake-package-json": "node sh/remake-package-json",
-    "clean": "bash -c './sh/clean.sh'",
-    "clean-artifacts": "bash -c './sh/clean-artifacts.sh'",
-    "clean-all": "bash -c './sh/clean-all.sh'",
-    "fix": "bash -c './sh/fix.sh'",
-    "test": "bash -c './sh/test.sh'",
-    "build": "bash -c 'BUILD_MODE=Release ./sh/build.sh'"
+    "clean": "bash 'sh/clean.sh'",
+    "clean-artifacts": "bash 'sh/clean-artifacts.sh'",
+    "clean-all": "bash 'sh/clean-all.sh'",
+    "fix": "bash 'sh/fix.sh'",
+    "test": "bash 'sh/test.sh'",
+    "build": "bash -c 'BUILD_MODE=Release bash sh/build.sh'",
+    "fix": "bash 'sh/fix.sh'",
+    "test": "bash 'sh/test.sh'"
   }
 }
