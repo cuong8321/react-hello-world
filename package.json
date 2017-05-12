@@ -12,8 +12,6 @@
     "clean-all": "bash 'sh/clean-all.sh'",
     "fix": "bash 'sh/fix.sh'",
     "test": "bash 'sh/test.sh'",
-    "build": "bash -c 'BUILD_MODE=Release bash sh/build.sh'",
-    "fix": "bash 'sh/fix.sh'",
-    "test": "bash 'sh/test.sh'"
+    "build": "bash -c 'BUILD_MODE=Release bash sh/build.sh'"
   }
 }
