@@ -11,7 +11,8 @@ const config = {
   },
   module: {
     loaders: require('./loaders.js')
-  }
+  },
+  plugins: require('./plugins.js')
 }
 
 module.exports = config
