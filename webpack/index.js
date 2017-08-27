@@ -1,7 +1,7 @@
 'use strict'
 const path = require('path')
 const BUILD_DIR = path.resolve(__dirname, '../dist')
-const APP_DIR = path.resolve(__dirname, '../src/client/index.jsx')
+const APP_DIR = path.resolve(__dirname, '../src/client')
 
 const config = {
   entry: path.join(APP_DIR, 'index.jsx'),
