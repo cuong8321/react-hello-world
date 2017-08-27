@@ -8,6 +8,7 @@
     "webpack": "^3.5.5"
   },
   "devDependencies": {
+    "jest": "^20.0.4",
     "standard": "10.0.2"
   },
   "scripts": {
