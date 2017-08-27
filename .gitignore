@@ -19,6 +19,7 @@ temp.*
 /debug
 /debug.*
 /*.debug
+/src/client/public
 *.tern-project
 *.tern-project.json
 
