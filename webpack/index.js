@@ -10,9 +10,7 @@ const config = {
     filename: 'bundle.js'
   },
   devtool: 'source-map',
-  module: {
-    loaders: require('./loaders.js')
-  },
+  module: require('./module'),
   plugins: require('./plugins.js')
 }
 
