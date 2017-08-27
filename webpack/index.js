@@ -10,7 +10,7 @@ const config = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: require('./webpack/loaders.js')
+    loaders: require('./loaders.js')
   }
 }
 
