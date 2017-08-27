@@ -9,7 +9,7 @@ const config = {
     path: BUILD_DIR,
     filename: 'bundle.js'
   },
-  devtool: "source-map",
+  devtool: 'source-map',
   module: {
     loaders: require('./loaders.js')
   },
