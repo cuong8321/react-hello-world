@@ -1,7 +1,22 @@
+'use strict'
+const jsregex = /\.(js|jsx|es[0-9]?x?)$/
+const exclude = /node_modules|bower_components/
+
 module.exports = [
   {
-    test: /\.(js|jsx|es[0-9]?x?)$/,
+    test: jsregex,
     loader: 'babel-loader',
-    exclude: /node_modules/
+    exclude
+  },
+  {
+    enforce: 'pre',
+    test: jsregex,
+    loader: 'standard-loader',
+    exclude,
+    options: {
+      error: true,
+      snazzy: true,
+      parser: 'babel-eslint'
+    }
   }
 ]
