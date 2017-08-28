@@ -9,7 +9,12 @@
     exit 2
   )
 ) && (
-  jest
+  if [[ $COVERALLS == 'true' ]];
+    then
+      jest --coverage && cat ./coverage/lcov.info | coveralls
+    else
+      jest
+  fi
 ) && (
   ./sh/build.sh
 )
