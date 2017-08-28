@@ -12,9 +12,9 @@
 ) && (
   if [[ $COVERALLS == 'true' ]];
     then
-      bash ./sh/test-coverage.sh
+      bash ./sh/test-coverage.sh -- $JEST_ARGV
     else
-      jest
+      jest -- $JEST_ARGV
   fi
 ) && (
   ./sh/build.sh
