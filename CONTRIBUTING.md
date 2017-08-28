@@ -22,6 +22,10 @@ Our JavaScript code follows [StandardJS](https://standardjs.com/)
 
 * [Git](https://git-scm.com/) ≥ 2.0.0
 
+* POSIX Tools (bash, sh, cat, ls, etc)
+  * Already avaible in POSIX OSes (Linux, macOS, etc)
+  * Windows: [Git Bash](https://git-scm.com/), MinGW, [msys2](http://www.msys2.org/), [Cygwin](http://cygwin.com), etc.
+
 * [Node.js](https://nodejs.org/) ≥ 8.0.0
   * Recommends [nvm](https://github.com/creationix/nvm) for POSIX (Linux, macOS, etc)
   * Windows users can use [nvm-windows](https://github.com/coreybutler/nvm-windows) or [chocolatey](https://chocolatey.org/packages/nodejs) as alternative
