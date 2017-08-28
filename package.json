@@ -2,10 +2,27 @@
   "version": "0.0.0",
   "main": "index.js",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "dependencies": {
+    "html-webpack-plugin": "^2.30.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "standard-loader": "^6.0.1",
+    "x-iterable": "^6.0.1"
+  },
   "devDependencies": {
-    "standard": "10.0.2"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-pipeline": "^0.1.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "jest": "^20.0.4",
+    "standard": "10.0.2",
+    "webpack": "^3.5.5"
   },
   "scripts": {
+    "start": "webpack-dev-server",
     "remake-package-json": "node sh/remake-package-json",
     "clean": "bash 'sh/clean.sh'",
     "clean-artifacts": "bash 'sh/clean-artifacts.sh'",
@@ -13,5 +30,15 @@
     "fix": "bash 'sh/fix.sh'",
     "test": "bash 'sh/test.sh'",
     "build": "bash -c 'BUILD_MODE=Release bash sh/build.sh'"
+  },
+  "standard": {
+    "env": {
+      "jest": true,
+      "browser": true,
+      "node": true
+    }
+  },
+  "engines": {
+    "node": ">= 8.0.0"
   }
 }

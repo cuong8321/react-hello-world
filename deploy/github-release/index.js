@@ -68,8 +68,8 @@ function * main () {
     __proto__: null
   }
   const RELEASE_PROTO = assign({}, DESC, {
-    draft: (/.*\-alpha[0-9]{0,}$/).test(GIT_REPO_TAG),
-    prerelease: (/.*\-beta[0-9]{0,}$/).test(GIT_REPO_TAG),
+    draft: (/.*-alpha[0-9]{0,}$/).test(GIT_REPO_TAG),
+    prerelease: (/.*-beta[0-9]{0,}$/).test(GIT_REPO_TAG),
     __proto__: null
   })
   const RELEASE_INFO = yield new Promise(

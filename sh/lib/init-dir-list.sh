@@ -1,1 +1,1 @@
-echo out
+echo dist

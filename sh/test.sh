@@ -9,7 +9,7 @@
     exit 2
   )
 ) && (
-  ./sh/build.sh
+  jest
 ) && (
-  node ./test
+  ./sh/build.sh
 )
