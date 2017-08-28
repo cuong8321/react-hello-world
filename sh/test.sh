@@ -14,7 +14,7 @@
     then
       bash ./sh/test-coverage.sh -- $JEST_ARGV
     else
-      jest -- $JEST_ARGV
+      bash ./sh/jest.sh -- $JEST_ARGV
   fi
 ) && (
   bash ./sh/build.sh
