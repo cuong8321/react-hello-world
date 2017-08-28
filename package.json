@@ -25,6 +25,7 @@
     "webpack": "^3.5.5"
   },
   "scripts": {
+    "jest": "jest",
     "start": "webpack-dev-server",
     "remake-package-json": "node sh/remake-package-json",
     "clean": "bash 'sh/clean.sh'",
