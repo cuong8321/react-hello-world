@@ -1,6 +1,5 @@
 'use strict'
-const jsregex = /\.(js|jsx|es[0-9]?x?)$/
-const exclude = /node_modules|bower_components/
+const {js: jsregex, exclude} = require('../lib/regexes')
 
 module.exports = [
   {
