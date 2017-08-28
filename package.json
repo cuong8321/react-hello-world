@@ -31,6 +31,13 @@
     "test": "bash 'sh/test.sh'",
     "build": "bash -c 'BUILD_MODE=Release bash sh/build.sh'"
   },
+  "standard": {
+    "env": {
+      "jest": true,
+      "browser": true,
+      "node": true
+    }
+  },
   "engines": {
     "node": ">= 8.0.0"
   }
