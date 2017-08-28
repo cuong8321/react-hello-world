@@ -10,7 +10,12 @@
     exit $code
   )
 ) && (
-  jest
+  if [[ $COVERALLS == 'true' ]];
+    then
+      bash ./sh/test-coverage.sh
+    else
+      jest
+  fi
 ) && (
   ./sh/build.sh
 )
