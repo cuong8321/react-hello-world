@@ -12,7 +12,7 @@
 ) && (
   if [[ $COVERALLS == 'true' ]];
     then
-      jest --coverage && cat ./coverage/lcov.info | coveralls
+      bash ./sh/test-coverage.sh
     else
       jest
   fi
