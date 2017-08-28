@@ -1,6 +1,6 @@
 (
   printf "Checking Code Style... "
-  standard > stdout.tmp 2> stderr.tmp && (
+  standard $STANDARD_ARGV > stdout.tmp 2> stderr.tmp && (
     echo "passed"
   ) || (
     code=$?
