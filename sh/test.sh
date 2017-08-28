@@ -17,5 +17,5 @@
       jest -- $JEST_ARGV
   fi
 ) && (
-  ./sh/build.sh
+  bash ./sh/build.sh
 )
