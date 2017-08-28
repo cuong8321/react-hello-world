@@ -27,7 +27,7 @@ test_script:
   - cmd: echo "Test" && npm test
 
 build_script:
-  - cmd: npm run pack
+  - cmd: npm run build
 
 artifacts:
   - path: dist\*.*
