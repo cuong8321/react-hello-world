@@ -2,8 +2,8 @@
 const path = require('path')
 const fs = require('fs')
 const {readdirRecursiveSync} = require('../../lib/readdir-recursive')
-const datadir = path.join(__dirname, 'data/dir')
-const listfile = path.join(__dirname, 'data/list')
+const datadir = path.join(__dirname, '../data/readdir-recursive/dir')
+const listfile = path.join(__dirname, '../data/readdir-recursive/list')
 
 const expectation = fs
   .readFileSync(listfile, 'utf8')
