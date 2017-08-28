@@ -28,7 +28,9 @@
   },
   "scripts": {
     "coveralls": "coveralls",
-    "unit-test": "jest",
+    "unit-test": "bash ./sh/jest.sh",
+    "unit-test-watch": "bash ./sh/jest.sh --watch",
+    "unit-test-coverage": "bash ./sh/test-coverage.sh",
     "start": "webpack-dev-server",
     "remake-package-json": "node sh/remake-package-json",
     "clean": "bash 'sh/clean.sh'",
