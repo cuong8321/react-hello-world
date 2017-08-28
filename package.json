@@ -6,7 +6,8 @@
     "html-webpack-plugin": "^2.30.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "standard-loader": "^6.0.1"
+    "standard-loader": "^6.0.1",
+    "x-iterable": "^6.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

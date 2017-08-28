@@ -804,6 +804,13 @@ commondir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
 
+concat-iterable@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/concat-iterable/-/concat-iterable-3.0.1.tgz#526667ded6a41b6da24d696a20ef0a3be695ea3d"
+  dependencies:
+    x-iterable-base "^4.0.0"
+    x-iterable-utils "^1.0.1"
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
@@ -978,6 +985,14 @@ deep-extend@~0.4.0:
 deep-is@~0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
+
+deep-iterable@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/deep-iterable/-/deep-iterable-3.0.1.tgz#61e96b59b555e2cc75e2040ddd47f0b28e81fecc"
+  dependencies:
+    simple-function-utils ">=2.1.2 <3.0.0"
+    x-iterable-base "^4.0.0"
+    x-iterable-utils "^1.0.1"
 
 default-require-extensions@^1.0.0:
   version "1.0.0"
@@ -2954,6 +2969,13 @@ pako@~0.2.0:
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/pako/-/pako-0.2.9.tgz#f3f7522f4ef782348da8161bad9ecfd51bf83a75"
 
+parallel-iterable@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/parallel-iterable/-/parallel-iterable-3.0.1.tgz#9a4033be3feab8f94519da906723f609ca87ad10"
+  dependencies:
+    x-iterable-base "^4.0.0"
+    x-iterable-utils "^1.0.1"
+
 param-case@2.1.x:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/param-case/-/param-case-2.1.1.tgz#df94fd8cf6531ecf75e6bef9a0858fbc72be2247"
@@ -3132,6 +3154,14 @@ process@^0.11.0:
   version "0.11.10"
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
 
+product-iterable@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/product-iterable/-/product-iterable-3.0.1.tgz#bf0c2daf378767f1035b5f252c2758a8414bb2bc"
+  dependencies:
+    simple-class-utils ">=0.0.4 <2.0.0"
+    x-iterable-base "^4.0.0"
+    x-iterable-utils "^1.0.1"
+
 progress@^1.1.8:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/progress/-/progress-1.1.8.tgz#e260c78f6161cdd9b0e56cc3e0a85de17c7a57be"
@@ -3199,6 +3229,13 @@ randombytes@^2.0.0, randombytes@^2.0.1:
   resolved "https://registry.yarnpkg.com/randombytes/-/randombytes-2.0.5.tgz#dc009a246b8d09a177b4b7a0ae77bc570f4b1b79"
   dependencies:
     safe-buffer "^5.1.0"
+
+range-iterable@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/range-iterable/-/range-iterable-3.0.1.tgz#2e37e3a3f6fa629b5c832a8ad4561f4171d5e153"
+  dependencies:
+    x-iterable-base "^4.0.0"
+    x-iterable-utils "^1.0.1"
 
 rc@^1.1.7:
   version "1.2.1"
@@ -3513,6 +3550,14 @@ signal-exit@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
+"simple-class-utils@>=0.0.4 <2.0.0", simple-class-utils@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/simple-class-utils/-/simple-class-utils-0.3.0.tgz#6d4623f508137158992fe3eec5c6f3f10f0ddebb"
+
+"simple-function-utils@>=2.1.2 <3.0.0", simple-function-utils@^2.1.2:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/simple-function-utils/-/simple-function-utils-2.3.0.tgz#dd574d74f5e8864894d496259e1f493bff725134"
+
 slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
@@ -3578,6 +3623,13 @@ spdx-expression-parse@~1.0.0:
 spdx-license-ids@^1.0.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-1.2.2.tgz#c9df7a3424594ade6bd11900d596696dc06bac57"
+
+spread-iterable@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/spread-iterable/-/spread-iterable-3.0.1.tgz#9e0dc67ca25736390ca168718aea7b47a8d29ca9"
+  dependencies:
+    x-iterable-base "^4.0.0"
+    x-iterable-utils "^1.0.1"
 
 sprintf-js@~1.0.2:
   version "1.0.3"
@@ -4108,6 +4160,32 @@ write@^0.2.1:
   resolved "https://registry.yarnpkg.com/write/-/write-0.2.1.tgz#5fc03828e264cea3fe91455476f7a3c566cb0757"
   dependencies:
     mkdirp "^0.5.1"
+
+x-iterable-base@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/x-iterable-base/-/x-iterable-base-4.0.0.tgz#b4829ccc42a7f0a8d78c338836ab3ececf8bdc8d"
+  dependencies:
+    simple-class-utils "^0.3.0"
+    simple-function-utils "^2.1.2"
+
+x-iterable-utils@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/x-iterable-utils/-/x-iterable-utils-1.0.1.tgz#c6584f332ffbcde1e9245b7b5dc06d2e9b3e9cc6"
+  dependencies:
+    x-iterable-base "^4.0.0"
+
+x-iterable@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/x-iterable/-/x-iterable-6.0.1.tgz#3c3eb502f1ac37b010413ab6f44146297b3ed2da"
+  dependencies:
+    concat-iterable "^3.0.0"
+    deep-iterable "^3.0.0"
+    parallel-iterable "^3.0.0"
+    product-iterable "^3.0.0"
+    range-iterable "^3.0.0"
+    spread-iterable "^3.0.0"
+    x-iterable-base "^4.0.0"
+    x-iterable-utils "^1.0.1"
 
 xml-char-classes@^1.0.0:
   version "1.0.0"
