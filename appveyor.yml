@@ -21,13 +21,10 @@ install:
   - cmd: IF %nodejs_version% NEQ 0.8 set PATH=%APPDATA%\npm;%PATH%
   - cmd: npm install
 
-test_script:
+build_script:
   - cmd: echo "NodeJS version" && node --version
   - cmd: echo "NPM version" && npm --version
   - cmd: echo "Test" && npm test
-
-build_script:
-  - cmd: npm run pack
 
 artifacts:
   - path: dist\*.*
