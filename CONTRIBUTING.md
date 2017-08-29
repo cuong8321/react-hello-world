@@ -61,6 +61,18 @@ yarn install
 
 ### Run, Test, Build, Deploy
 
+#### Build
+
+```sh
+npm run build # OR: yarn run build
+```
+
+#### Start live server
+
+```sh
+npm start # OR: yarn start
+```
+
 #### Run overall test
 
 ```sh
@@ -79,16 +91,4 @@ npm run unit-test # OR: yarn run unit-test
 
 ```sh
 npm run unit-test-watch # OR: yarn run unit-test-watch
-```
-
-#### Start live server
-
-```sh
-npm start # OR: yarn start
-```
-
-#### Build
-
-```sh
-npm run build # OR: yarn run build
 ```
