@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer'
 import App from '../../subject-components/App.jsx'
 
 test('Snapshot: components/App.jsx', () => {
-  const tree = renderer.create(<App />).toJSON()
+  const init = () => 0.123456789
+  const tree = renderer.create(<App init={init} />).toJSON()
   expect(tree).toMatchSnapshot()
 })
