@@ -6,6 +6,9 @@ sudo: required
 node_js:
   - '8'
 
+env:
+  - COVERALLS=true
+
 before_script:
   - chmod -R +x sh
   - source ./sh/travis-ci/before-script.sh
