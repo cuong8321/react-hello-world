@@ -32,6 +32,7 @@
   },
   "scripts": {
     "browser": "bash ./sh/browser.sh",
+    "view-coverage": "bash ./sh/view-coverage.sh",
     "coveralls": "coveralls",
     "unit-test": "bash ./sh/jest.sh",
     "unit-test-watch": "bash ./sh/jest.sh --watch",
