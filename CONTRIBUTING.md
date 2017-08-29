@@ -79,7 +79,7 @@ npm start # OR: yarn start
 npm test # OR: yarn test
 ```
 
-**NOTE:** When an attempt to modify React DOM tree is made, the test should fail because of [snapshots' changes](./test/main/src/client/components/__snapshots__). This happens to prevent developers from accidentally modifying DOM structure without explicit intention. To resolve this, developer must either *assert the changes* by committing snapshots or *undo the changes*.
+**NOTE:** When an attempt to modify React DOM tree is made, the test should fail because of [snapshots' changes](./test/main/src/client/components/__snapshots__). This happens to prevent developers from accidentally modifying DOM structure without explicit intention. To resolve this, you must either [*assert the changes*](#assert-the-changes) by committing snapshots or [*undo the changes*](#undo-the-changes).
 
 #### Run unit tests
 
