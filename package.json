@@ -31,6 +31,7 @@
     "webpack": "^3.5.5"
   },
   "scripts": {
+    "browser": "bash ./sh/browser.sh",
     "coveralls": "coveralls",
     "unit-test": "bash ./sh/jest.sh",
     "unit-test-watch": "bash ./sh/jest.sh --watch",
