@@ -78,7 +78,7 @@ npm run unit-test # OR: yarn run unit-test
 #### Run and Watch unit tests
 
 ```sh
-npm run unit-test --watch # OR: yarn run unit-test --watch
+npm run unit-test-watch # OR: yarn run unit-test-watch
 ```
 
 #### Start live server
