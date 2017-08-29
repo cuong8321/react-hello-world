@@ -31,6 +31,8 @@
     "webpack": "^3.5.5"
   },
   "scripts": {
+    "browser": "bash ./sh/browser.sh",
+    "view-coverage": "bash ./sh/view-coverage.sh",
     "coveralls": "coveralls",
     "unit-test": "bash ./sh/jest.sh",
     "unit-test-watch": "bash ./sh/jest.sh --watch",
@@ -42,7 +44,7 @@
     "clean-all": "bash 'sh/clean-all.sh'",
     "fix": "bash 'sh/fix.sh'",
     "test": "bash 'sh/test.sh'",
-    "build": "bash -c 'BUILD_MODE=Release bash sh/build.sh'"
+    "build": "env BUILD_MODE=Release bash sh/build.sh"
   },
   "standard": {
     "env": {
