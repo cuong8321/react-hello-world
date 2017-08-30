@@ -1,3 +1,3 @@
 module.exports = {
-  rules: require('./rules.js')
+  rules: require('./rules')
 }

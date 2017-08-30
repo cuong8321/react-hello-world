@@ -1,5 +1,5 @@
 'use strict'
-const {js: jsregex, exclude} = require('../lib/regexes')
+const {js: jsregex, exclude} = require('../../lib/regexes')
 
 module.exports = [
   {
