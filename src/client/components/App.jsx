@@ -1,6 +1,5 @@
 import React from 'react'
 import AppBar from 'material-ui/AppBar'
-import Paper from 'material-ui/Paper'
 import DefaultMuiTheme from './DefaultMuiTheme.jsx'
 import RandomNumber from './RandomNumber.jsx'
 
@@ -10,8 +9,6 @@ export default function App ({init}) {
 
   return <DefaultMuiTheme><div>
     <AppBar title='Hello, World!!' />
-    <Paper zDepth={1}>
-      <RandomNumber display={display} init={init} />
-    </Paper>
+    <RandomNumber display={display} init={init} />
   </div></DefaultMuiTheme>
 }
