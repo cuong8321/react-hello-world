@@ -8,12 +8,10 @@ export default function App ({init}) {
   const display = num =>
     parseFloat(num).toString(16).slice(2, 18)
 
-  return <div>
-    <DefaultMuiTheme><div>
-      <AppBar title='Hello, World!!' />
-      <Paper zDepth={1}>
-        <RandomNumber display={display} init={init} />
-      </Paper>
-    </div></DefaultMuiTheme>
-  </div>
+  return <DefaultMuiTheme><div>
+    <AppBar title='Hello, World!!' />
+    <Paper zDepth={1}>
+      <RandomNumber display={display} init={init} />
+    </Paper>
+  </div></DefaultMuiTheme>
 }
