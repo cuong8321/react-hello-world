@@ -17,11 +17,15 @@ export default class UpperCaseForm extends React.Component {
 
     return <Paper zDepth={1}><div>
       <div>
-        <TextField hintText='Your Text Here...' onChange={onChange} value={this.state.text} />
+        <TextField id='input' hintText='Your Text Here...' onChange={onChange} value={this.state.text} />
         <FlatButton secondary label='Clear' onClick={clear} />
         <Paper zDepth={0}>
-          <label htmlFor='output'>Upper Case: </label>
-          <output id='output'>{this.state.text.toUpperCase() || <i>(Empty)</i>}</output>
+          <label htmlFor='output-upper'>Upper Case: </label>
+          <output id='output-upper'>{this.state.text.toUpperCase() || <i>(Empty)</i>}</output>
+        </Paper>
+        <Paper zDepth={0}>
+          <label htmlFor='output-lower'>Lower Case: </label>
+          <output id='output-lower'>{this.state.text.toLowerCase() || <i>(Empty)</i>}</output>
         </Paper>
       </div>
       <div>
