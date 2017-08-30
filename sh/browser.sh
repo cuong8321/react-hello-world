@@ -2,6 +2,7 @@ url=$(node \
   ./sh/lib/absolute-url.js \
   $([[ -n "$1" ]] && echo "$1" || echo $OPEN_URL)
 )
+
 browserlist=(
   $BROWSER_EXEC $BROWSER
   chrome google-chrome google-chrome-stable
