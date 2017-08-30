@@ -1,22 +1,16 @@
 'use strict'
+const path = require('path')
+const {readFileSync} = require('fs')
+const yaml = require('js-yaml')
 const {js: jsregex, exclude} = require('../../lib/regexes')
+
+const loadYamlFile = filename =>
+  yaml.safeLoad(readFileSync(path.resolve(__dirname, filename), 'utf8'))
 
 module.exports = [
   {
     test: jsregex,
-    use: [
-      'babel-loader',
-      {
-        loader: 'standard-loader',
-        options: {
-          options: {
-            error: true,
-            snazzy: true,
-            parser: 'babel-eslint'
-          }
-        }
-      }
-    ],
+    use: loadYamlFile('use-javascript.yaml'),
     exclude
   }
 ]
