@@ -11,7 +11,7 @@ export default class RandomNumber extends React.Component {
   }
 
   render () {
-    return <Paper zDepth={1}>
+    return <Paper zDepth={0}>
       <span className='label'>Random Number: </span>
       <span className='value'>{this.state.displayValue()}</span>
     </Paper>
