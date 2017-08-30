@@ -11,6 +11,7 @@ exports[`Snapshot: components/RandomNumber.jsx with default display function 1`]
       "boxSizing": "border-box",
       "color": "rgba(0, 0, 0, 0.87)",
       "fontFamily": "Roboto, sans-serif",
+      "muiPrepared": true,
       "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
     }
   }
@@ -39,6 +40,7 @@ exports[`Snapshot: components/RandomNumber.jsx with specified display function 1
       "boxSizing": "border-box",
       "color": "rgba(0, 0, 0, 0.87)",
       "fontFamily": "Roboto, sans-serif",
+      "muiPrepared": true,
       "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
     }
   }
@@ -67,6 +69,7 @@ exports[`Snapshot: components/RandomNumber.jsx with specified display function 2
       "boxSizing": "border-box",
       "color": "rgba(0, 0, 0, 0.87)",
       "fontFamily": "Roboto, sans-serif",
+      "muiPrepared": true,
       "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
     }
   }
@@ -95,6 +98,7 @@ exports[`Snapshot: components/RandomNumber.jsx with specified display function 3
       "boxSizing": "border-box",
       "color": "rgba(0, 0, 0, 0.87)",
       "fontFamily": "Roboto, sans-serif",
+      "muiPrepared": true,
       "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
     }
   }
@@ -123,6 +127,7 @@ exports[`Snapshot: components/RandomNumber.jsx with specified display function 4
       "boxSizing": "border-box",
       "color": "rgba(0, 0, 0, 0.87)",
       "fontFamily": "Roboto, sans-serif",
+      "muiPrepared": true,
       "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
     }
   }
@@ -151,6 +156,7 @@ exports[`Snapshot: components/RandomNumber.jsx with specified display function 5
       "boxSizing": "border-box",
       "color": "rgba(0, 0, 0, 0.87)",
       "fontFamily": "Roboto, sans-serif",
+      "muiPrepared": true,
       "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
     }
   }
