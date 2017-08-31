@@ -2,7 +2,6 @@ import './__lib__/material-ui-mocks.jsx'
 import React from 'react'
 import renderer from 'react-test-renderer'
 import RandomNumber from '../../../../../src/client/components/RandomNumber.jsx'
-import DefaultMuiTheme from '../../../../../src/client/components/DefaultMuiTheme.jsx'
 
 describe('Snapshot: components/RandomNumber.jsx', () => {
   const init = () => 0.123456789
