@@ -8,7 +8,11 @@ exports[`Snapshot: components/UpperCaseForm.jsx 1`] = `
     <div>
       <mocked-component
         hintText="Your Text Here..."
-        id="input"
+        onChange={[Function]}
+        value=""
+      />
+      <mocked-component
+        hintText="...ereH txeT ruoY"
         onChange={[Function]}
         value=""
       />
