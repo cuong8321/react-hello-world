@@ -142,7 +142,7 @@ Just like you do it in a geniune UNIX/Linux environment. There should be no trou
 
 Place directory `bin` of your POSIX tool before that of WSL.
 
-Open your *non-WSL* bash and enter the following:
+Open your **non-WSL** bash and enter the following:
 
 ```sh
 export PATH="$(dirname "$0"):$PATH"
