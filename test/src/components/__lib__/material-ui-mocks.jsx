@@ -12,7 +12,9 @@ function createMockedComponent () {
   'material-ui/styles/MuiThemeProvider',
   'material-ui/styles/baseThemes/darkBaseTheme',
   'material-ui/AppBar',
-  'material-ui/Paper'
+  'material-ui/Paper',
+  'material-ui/TextField',
+  'material-ui/FlatButton'
 ].forEach(moduleName =>
   jest.doMock(moduleName, createMockedComponent)
 )

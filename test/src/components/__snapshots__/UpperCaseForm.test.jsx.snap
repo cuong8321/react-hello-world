@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot: components/UpperCaseForm.jsx 1`] = `
+<mocked-component
+  zDepth={1}
+>
+  <div>
+    <div>
+      <mocked-component
+        hintText="Your Text Here..."
+        id="input"
+        onChange={[Function]}
+        value=""
+      />
+      <mocked-component
+        label="Clear"
+        onClick={[Function]}
+        secondary={true}
+      />
+      <mocked-component
+        zDepth={0}
+      >
+        <label
+          htmlFor="output-upper"
+        >
+          Upper Case: 
+        </label>
+        <output
+          id="output-upper"
+        >
+          <i>
+            (Empty)
+          </i>
+        </output>
+      </mocked-component>
+      <mocked-component
+        zDepth={0}
+      >
+        <label
+          htmlFor="output-lower"
+        >
+          Lower Case: 
+        </label>
+        <output
+          id="output-lower"
+        >
+          <i>
+            (Empty)
+          </i>
+        </output>
+      </mocked-component>
+    </div>
+    <div>
+      <mocked-component
+        zDepth={0}
+      />
+    </div>
+  </div>
+</mocked-component>
+`;
