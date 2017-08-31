@@ -154,7 +154,7 @@ If you're using both non-WSL posix tools and WSL in Windows 10, you may encounte
 
 #### Clone, edit, build project within WSL environment
 
-Just like you do it in a geniune UNIX/Linux environment. There should be no troubles regarding bash.
+Just like you do it in a genuine UNIX/Linux environment. There should be no troubles regarding bash.
 
 #### Modify `PATH` environment variable
 
