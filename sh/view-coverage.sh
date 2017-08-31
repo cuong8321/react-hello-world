@@ -1,3 +1,3 @@
-bash \
-  ./sh/browser.sh \
-  "$(realpath ./coverage/lcov-report/index.html)"
+exec bash \
+  ./sh/browse-local-fs.sh \
+  ./coverage/lcov-report/index.html

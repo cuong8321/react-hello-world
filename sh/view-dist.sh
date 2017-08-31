@@ -1,3 +1,3 @@
-bash \
-  ./sh/browser.sh \
-  "$(realpath ./dist)"
+exec bash \
+  ./sh/browse-local-fs.sh \
+  ./dist
