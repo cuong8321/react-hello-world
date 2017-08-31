@@ -128,6 +128,24 @@ When you do not want to modify React DOM structure but test fails due to snapsho
   * `git clean --interactive` to make decision for every file individually
   * `git clean --force`: You must be absolutely certain that you won't regret after this
 
+## Project structure
+
+```
+→ /src: contains content of website
+  → /src/client: contains client-side code
+    → /src/client/components: contains custom ReactJS components
+
+  → /src/server: contains server-side code
+
+→ /test: contains unit-test modules
+  → /test/data: contains preset data for testing
+  → /test/main: contains unit-test modules
+
+→ /sh: contains script files to be called by npm/yarn
+→ /jest: contains Jest's configuration files
+→ /webpack: contains Webpack's configuration files
+```
+
 ## Troubleshooting
 
 ### Windows: WSL conflict
